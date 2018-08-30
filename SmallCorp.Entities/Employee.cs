@@ -61,5 +61,10 @@ namespace SmallCorp.Entities
                 startDate = value;
             }
         }
+
+        public override string ToString()
+        {
+            return $"Name: {Firstname} {Lastname} \nPosition: {Position} \nSalary: {Salary:C} \nStartdate: {StartDate.ToShortDateString()}\n\n";
+        }
     }
 }

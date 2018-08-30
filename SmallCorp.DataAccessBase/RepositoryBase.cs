@@ -20,12 +20,12 @@ namespace SmallCorp.DataAccessBase
         }
 
         // Method Execute, return a dataSet from DB.
-        protected virtual DataSet Execute(string sql)
+        protected virtual DataSet Execute(string query)
         {
             DataSet resultSet = new DataSet();
             try
             {
-                using(SqlDataAdapter adapter = new SqlDataAdapter(new SqlCommand(sql, new SqlConnection(connectionString))))
+                using(SqlDataAdapter adapter = new SqlDataAdapter(new SqlCommand(query, new SqlConnection(connectionString))))
                 {
                     adapter.Fill(resultSet);
                 }

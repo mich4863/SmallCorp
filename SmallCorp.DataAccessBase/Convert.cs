@@ -12,7 +12,13 @@ namespace SmallCorp.DataAccessBase
     {
         public static Employee ToEmployee(DataRow dataRow)
         {
-            return new Employee(default, default, default, default, default);
+            string firstname = (string)dataRow["Firstname"];
+            string lastname = (string)dataRow["Lastname"];
+            string position = (string)dataRow["Position"];
+            decimal salary = (decimal)dataRow["Salary"];
+            DateTime startDate = (DateTime)dataRow["StartDate"];
+
+            return new Employee(firstname, lastname, position, salary, startDate);
         }
     }
 }

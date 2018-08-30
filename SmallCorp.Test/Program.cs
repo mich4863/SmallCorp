@@ -17,7 +17,7 @@ namespace SmallCorp.Test
 
             foreach(var item in employees)
             {
-                Console.WriteLine(item);
+                Console.Write(item.ToString());
             }
             Console.ReadLine();
         }

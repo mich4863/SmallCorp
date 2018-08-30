@@ -12,7 +12,7 @@ namespace SmallCorp.DataAccessBase
     {
         #region Constructor
         public EmployeeRepository()
-            : base(ConnectionStrings.db) { }
+            : base(ConnectionStrings.employeesDb) { }
         #endregion
 
         #region Method GetAllEmployees
@@ -21,6 +21,7 @@ namespace SmallCorp.DataAccessBase
             string sqlQuery = SqlQueries.selectAll + " Employees";
 
             DataSet employeeSet = base.Execute(sqlQuery);
+
             DataTable employeeTable = employeeSet.Tables[0];
 
             List<Employee> employees = new List<Employee>(0);
