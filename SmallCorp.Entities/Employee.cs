@@ -64,7 +64,7 @@ namespace SmallCorp.Entities
 
         public override string ToString()
         {
-            return $"Name: {Firstname} {Lastname} \nPosition: {Position} \nSalary: {Salary:C} \nStartdate: {StartDate.ToShortDateString()}\n\n";
+            return $"NAME: {Firstname} {Lastname} \nPOSITION: {Position} \nSALARY: {Salary:C} \nSTARTDATE: {StartDate.ToShortDateString()}\n\n";
         }
     }
 }
